@@ -44,12 +44,17 @@ def main():
     link = args.link
     try:
         if is_bitlink(bitly_access_token, link):
-            print('Количество кликов:', count_clicks(bitly_access_token, link))
+            print(
+                'Сокращенная ссылка:', shorten_link(bitly_access_token, link)
+            )
         else:
             print('Сокращенная ссылка:', shorten_link(bitly_access_token, link))
     except requests.exceptions.HTTPError:
-        print('Вы ввели неправильную ссылку или неверный токен, попробуйте ещё раз.')
+        print(
+            'Вы ввели неправильную ссылку или неверный токен,'
+            'попробуйте ещё раз.'
+        )
 
-
+        
 if __name__ == '__main__':
     main()
