@@ -37,22 +37,22 @@ def is_bitlink(token, link):
 
 def main():
     load_dotenv()
-    bitly_access_token = os.getenv("BITLY_ACCESS_TOKEN")
-    parser = argparse.ArgumentParser('Описание программы')
-    parser.add_argument('link', help='Введите ссылку.')
+    bitly_access_token = os.environ["BITLY_ACCESS_TOKEN"]
+    parser = argparse.ArgumentParser('Program Description')
+    parser.add_argument('link', help='Enter the link.')
     args = parser.parse_args()
     link = args.link
     try:
         if is_bitlink(bitly_access_token, link):
             print(
-                'Сокращенная ссылка:', shorten_link(bitly_access_token, link)
+                'Number of clicks:', shorten_link(bitly_access_token, link)
             )
         else:
-            print('Сокращенная ссылка:', shorten_link(bitly_access_token, link))
+            print('Abbreviated link:', shorten_link(bitly_access_token, link))
     except requests.exceptions.HTTPError:
         print(
-            'Вы ввели неправильную ссылку или неверный токен,'
-            'попробуйте ещё раз.'
+            'You entered the wrong link or the wrong token,'
+            'try again.'
         )
 
         
