@@ -14,14 +14,15 @@ pip install -r requirements.txt
 
 #### Environment variables
 
-- SECRET_KEY
+- BITLY_ACCESS_TOKEN
 
 1. Put `.env` file near `main.py`.
 2. `.env` contains text data without quotes.
 
 For example, if you print `.env` content, you will see:
 ```
-$ cat .env SECRET_KEY = <your token>
+$ cat .env
+BITLY_ACCESS_TOKEN=1a5d754733b0130143c70238efa4esa4d1taec48
 ```
   
 ## Example of running a script
