@@ -29,13 +29,13 @@ BITLY_ACCESS_TOKEN=1a5d754733b0130143c70238efa4esa4d1taec48
 - Running the program to shorten the link:
 ```
 C:\Users\link_reduction> python main.py https://www.google.com/
-Сокращенная ссылка: https://bit.ly/3WxCAme
+Abbreviated link: https://bit.ly/3WxCAme
 ```
 
 - With a bit.ly url:
 ```
 C:\Users\link_reduction> python main.py https://bit.ly/3WxCAme
-Количество кликов: 1
+Number of clicks: 1
 ```
 ## Project Goals
 This code was written for educational purposes as part of an online course for web developers at [dvmn.org.](https://dvmn.org/)
